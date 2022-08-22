@@ -2,7 +2,7 @@
 enboyko microservices repository
 
 ---
-# HOMEWORK #12:
+# HOMEWORK #12 and #13 (2in1):
 
 1. Создал репозиторий **docker-2**
 2. Установил **docker** и **docker-tools**
@@ -22,7 +22,7 @@ enboyko microservices repository
     `docker inspect <u_image_id>`
 
 ---
-# HOMEWORK #12:
+# HOMEWORK #14:
 
 1. Установил и применял в работе **linter** - **hadolint**
 2. Разбил приложение на несколько компонентов - создал новую структуру микросервисного приложения.
