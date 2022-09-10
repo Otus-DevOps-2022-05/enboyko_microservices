@@ -51,6 +51,7 @@ enboyko microservices repository
 - с помощью команды `docker-compose -p [имя_проекта] up -d`
 - с помощью инициализации и объявления переменной окружения **COMPOSE_PROJECT_NAME** в файле параметризации типа **.env***
 
+---
 # HOMEWORK #16:
 
 ### 1. Подготовил инсталляцию Gitlab CI
@@ -86,3 +87,13 @@ enboyko microservices repository
 3. Добавил в описание пайплайна директиву **only**, которая не позволит выкатить на **staging** и **production** код, не помеченный с помощью тэга в **git**.
 4. Добавил задачу с динамическими окружениями в **.gitlab-ci.yml**.
 5. Проверил создание динамических окружений.
+
+---
+# HOMEWORK #17:
+
+### 1. ЗАПОЛНЮ ПОЗЖЕ
+
+docker push jaxowner/ui
+docker push jaxowner/comment
+docker push jaxowner/post
+docker push jaxowner/prometheus
