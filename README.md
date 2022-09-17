@@ -109,6 +109,9 @@ enboyko microservices repository
 
 ### 3. Сбор метрик хоста с использованием экспортера
 
+<details>
+  <summary>Описание</summary>
+
 1. Определил в **docker/docker-compose.yml** новый сервис - **node-exporter**.
 2. Добавил информацию о сервисе **node-exporter** (джобу) в конфигурационный файл **prometheus.yml**.
 3. Собрал новый **Docker-образ** **Prometheus**.
@@ -125,3 +128,4 @@ docker push jaxowner/comment
 docker push jaxowner/post
 docker push jaxowner/prometheus
 ```
+</details>

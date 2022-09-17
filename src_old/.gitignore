@@ -1,0 +1,12 @@
+#docker-compose.yml
+build_info.txt
+prometheus/
+.env
+#*.tfstate
+#*.tfstate.*.backup
+#*.tfstate.backup
+#*.tfvars
+#.terraform/
+
+## python specific
+*.pyc
