@@ -91,6 +91,9 @@ enboyko microservices repository
 ---
 # HOMEWORK #17:
 
+<details>
+  <summary>Описание</summary>
+
 ### 1. Prometheus: запуск, конфигурация, знакомство с Web UI
 1. Создал в **Yandex.Cloud** новую виртуальную машину (инстанс) с помощью **Yandex.Cloud CLI**.
 2. В вышеуказанном инстансе создал *docker-host* с помощью **docker-machine**.
@@ -109,6 +112,8 @@ enboyko microservices repository
 
 ### 3. Сбор метрик хоста с использованием экспортера
 
+
+
 1. Определил в **docker/docker-compose.yml** новый сервис - **node-exporter**.
 2. Добавил информацию о сервисе **node-exporter** (джобу) в конфигурационный файл **prometheus.yml**.
 3. Собрал новый **Docker-образ** **Prometheus**.
@@ -125,3 +130,19 @@ docker push jaxowner/comment
 docker push jaxowner/post
 docker push jaxowner/prometheus
 ```
+</details>
+
+---
+# HOMEWORK #17:
+
+<details>
+  <summary>Описание</summary>
+
+### 1. Подготовил окружение.
+### 2. Настроил логирование Docker-контейнеров.
+### 3. Настроил сбор неструктурированных логов.
+### 4. Настроил визуализацию логов.
+### 5. Настроил сбор структурированных логов.
+### 6. Настроил распределенный трейсинг.
+
+</details>
