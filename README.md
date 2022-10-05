@@ -111,9 +111,6 @@ enboyko microservices repository
 1. Производил мониторинг состояния микросервисов в **UI**: в качестве эксперимента специально останавливал сервисы (и позже поднимал их) и наблюдал, как изменится их статус, а также статус зависимых сервисов.
 
 ### 3. Сбор метрик хоста с использованием экспортера
-
-
-
 1. Определил в **docker/docker-compose.yml** новый сервис - **node-exporter**.
 2. Добавил информацию о сервисе **node-exporter** (джобу) в конфигурационный файл **prometheus.yml**.
 3. Собрал новый **Docker-образ** **Prometheus**.
@@ -133,7 +130,7 @@ docker push jaxowner/prometheus
 </details>
 
 ---
-# HOMEWORK #17:
+# HOMEWORK #18:
 
 <details>
   <summary>Описание</summary>
@@ -144,5 +141,28 @@ docker push jaxowner/prometheus
 ### 4. Настроил визуализацию логов.
 ### 5. Настроил сбор структурированных логов.
 ### 6. Настроил распределенный трейсинг.
+
+</details>
+
+---
+# HOMEWORK #19:
+
+<details>
+  <summary>Описание</summary>
+
+### 1. Опиcал приложение в контексте Kubernetes с помощью manifest- ов в YAML-формате. Основным примитивом был Deployment.
+Создал следующие файлы с Deployment-манифестами:
+- post-deployment.yml
+- ui-deployment.yml
+- comment-deployment.yml
+- mongo-deployment.yml
+### 2. Установил k8s на двух нодах с требуемыми по заданию характеристиками.
+1. Использовал документацию kubeadm https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+2. Также развернул k8s в Yandex Cloud с помощью предоставляемого Managed Service for Kubernetes.
+3. Потренировался в скейлинге количества нод в группе узлов.
+### 3. Применил созданные ранее манифесты одной командой:
+`kubectl apply -f ./kubernetes/reddit/`
+### 4. Проверил, что поды успешно запустились, посомтрев их статус и прочую информацию о них командой:
+`kubectl get pod --all-namespaces`
 
 </details>
