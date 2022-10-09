@@ -166,14 +166,14 @@ docker push jaxowner/prometheus
   <summary>Описание</summary>
 
 ### 1. Опиcал приложение в контексте Kubernetes с помощью manifest- ов в YAML-формате. Основным примитивом был Deployment.
-Создал следующие файлы с Deployment-манифестами:
-- post-deployment.yml
-- ui-deployment.yml
-- comment-deployment.yml
-- mongo-deployment.yml
+Создал следующие файлы с **Deployment**-манифестами:
+- **post-deployment.yml**
+- **ui-deployment.yml**
+- **comment-deployment.yml**
+- **mongo-deployment.yml**
 ### 2. Установил k8s на двух нодах с требуемыми по заданию характеристиками.
-1. Использовал документацию kubeadm https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
-2. Также развернул k8s в Yandex Cloud с помощью предоставляемого Managed Service for Kubernetes.
+1. Использовал документацию **kubeadm** https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+2. Также развернул **k8s** в **Yandex Cloud** с помощью предоставляемого **Managed Service for Kubernetes**.
 3. Потренировался в скейлинге количества нод в группе узлов.
 ### 3. Применил созданные ранее манифесты одной командой:
 `kubectl apply -f ./kubernetes/reddit/`
@@ -188,9 +188,34 @@ docker push jaxowner/prometheus
 <details>
   <summary>Описание</summary>
 
-### 1.
-### 2.
-### 3.
+### 1. Развернул локальное окружение для работы с Kubernetes.
+1. **kubectl** уже был установлен мной в прошлом ДЗ. Версия - 1.25.2.
+2. Установил локально **Minikube** версии 1.27.1 и развернул **Minikube**-кластер.
+3. В директории **./kubernetes/reddit** описал следующие манифесты:
+- comment-deployment.yml
+- comment-mongodb-service.yml
+- comment-service.yml
+- dev-namespace.yml
+- mongodb-service.yml
+- mongo-deployment.yml
+- post-deployment.yml
+- post-mongodb-service.yml
+- post-service.yml
+- ui-deployment.yml
+- ui-service.yml
+4. Установил тип **NodePort** для сервиса **ui**.
+5. Потрренировался в скейлинге подов, пробросе портов, переключении **namespace**'ов.
+6. Изучил **addon**'ы - в частности, "потрогал" стандартный **minikube dashboard**.
+.. и т.д.
+### 2. Развернул Kubernetes в Yandex Cloud.
+1. Аналогично прошлому ДЗ развернул **k8s** в **Yandex Cloud** с помощью предоставляемого **Managed Service for Kubernetes**, создав при этом группу из двух нод (узлов).
+2. Переключился с контекста кластера **Minikube**'а на контекст созданного кластера в **Yandex Cloud**.
+3. Создал **dev** namespace.
+### 3. Запустил приложение reddit в Kubernetes.
+1. Задеплоил все компоненты приложения **reddit**в namespace **dev** в кластере **Yandex Cloud**:
+`kubectl apply -f . -n dev`
+2. Убедился в работоспособности приложения.
+3. К **pull request**'у приложил скриншоты из консоли **Yandex Cloud**, а также скриншоты работающего приложения.
 </details>
 
 ---
