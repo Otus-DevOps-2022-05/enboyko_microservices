@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ui
+  labels:
+    app: reddit
+    component: ui
+spec:
+  type: NodePort # NodePort - для доступа снаружи кластера
+  ports:
+    #nodePort: 32092
+  - port: 9292 # port - для доступа к сервису изнутри кластера
+    protocol: TCP
+    targetPort: 9292
+  selector:
+    app: reddit
+    component: ui

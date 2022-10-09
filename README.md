@@ -4,6 +4,9 @@ enboyko microservices repository
 ---
 # HOMEWORK #12 and #13 (2in1):
 
+<details>
+  <summary>Описание</summary>
+
 1. Создал репозиторий **docker-2**
 2. Установил **docker** и **docker-tools**
 3. Попрактиковал и изучил базовые команды **docker**
@@ -20,18 +23,26 @@ enboyko microservices repository
     `docker inspect <u_container_id>`
     и
     `docker inspect <u_image_id>`
+</details>
 
 ---
 # HOMEWORK #14:
+
+<details>
+  <summary>Описание</summary>
 
 1. Установил и применял в работе **linter** - **hadolint**
 2. Разбил приложение на несколько компонентов - создал новую структуру микросервисного приложения.
 Для каждого сервиса - **post-py**, **comment** и **ui** - создал свой **Dockerfile**. Собрал, запустил и проверил приложение.
 3. Оптимизировал образ для сервиса **ui** - таким образом, уменьшил его размер. Пересобрал, перезапустил и проверил приложение.
 4. Создал Docker volume, подключил его к контейнеру с **MongoDB**. Пересобрал, перезапустил и проверил приложение.
+</details>
 
 ---
 # HOMEWORK #15:
+
+<details>
+  <summary>Описание</summary>
 
 ### 1. Работа с сетями в Docker
 1. Разобрался с работой сетей в **Docker** - с такими **network driver**'ами, как **none**, **host** и **bridge**
@@ -50,9 +61,13 @@ enboyko microservices repository
 2. Имя проекта можно задать:
 - с помощью команды `docker-compose -p [имя_проекта] up -d`
 - с помощью инициализации и объявления переменной окружения **COMPOSE_PROJECT_NAME** в файле параметризации типа **.env***
+</details>
 
 ---
 # HOMEWORK #16:
+
+<details>
+  <summary>Описание</summary>
 
 ### 1. Подготовил инсталляцию Gitlab CI
 1. Создал в **Yandex.Cloud** новую виртуальную машину (инстанс) с помощью **Yandex.Cloud CLI**.
@@ -87,6 +102,7 @@ enboyko microservices repository
 3. Добавил в описание пайплайна директиву **only**, которая не позволит выкатить на **staging** и **production** код, не помеченный с помощью тэга в **git**.
 4. Добавил задачу с динамическими окружениями в **.gitlab-ci.yml**.
 5. Проверил создание динамических окружений.
+</details>
 
 ---
 # HOMEWORK #17:
@@ -141,7 +157,6 @@ docker push jaxowner/prometheus
 ### 4. Настроил визуализацию логов.
 ### 5. Настроил сбор структурированных логов.
 ### 6. Настроил распределенный трейсинг.
-
 </details>
 
 ---
@@ -166,3 +181,16 @@ docker push jaxowner/prometheus
 `kubectl get pod --all-namespaces`
 
 </details>
+
+---
+# HOMEWORK #20:
+
+<details>
+  <summary>Описание</summary>
+
+### 1.
+### 2.
+### 3.
+</details>
+
+---
