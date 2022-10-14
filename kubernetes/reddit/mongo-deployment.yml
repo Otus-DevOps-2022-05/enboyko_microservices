@@ -29,9 +29,9 @@ spec:
           - name: mongo-persistent-storage
             mountPath: /data/db
         volumes: # Ассоциированные с POD-ом Volume-ы
-# #  Старый тип volume'а (используемый ранее в ДЗ):
-#         - name: mongo-persistent-storage
-#           emptyDir: {} # При создании пода с таким типом просто создается пустой docker volume. При остановке POD'а содержимое emptyDir удалится навсегда. Хотя в общем случае падение POD'а не вызывает удаления Volume'а.
         - name: mongo-persistent-storage
           persistentVolumeClaim:
             claimName: mongo-pvc
+# #  Старый тип volume'а (используемый ранее в ДЗ):
+#         - name: mongo-persistent-storage
+#           emptyDir: {} # При создании пода с таким типом просто создается пустой docker volume. При остановке POD'а содержимое emptyDir удалится навсегда. Хотя в общем случае падение POD'а не вызывает удаления Volume'а.
