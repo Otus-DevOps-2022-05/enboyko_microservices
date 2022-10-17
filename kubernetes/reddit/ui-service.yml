@@ -1,3 +1,4 @@
+# Манифест для типа NodePort
 apiVersion: v1
 kind: Service
 metadata:
@@ -11,7 +12,26 @@ spec:
     #nodePort: 32092
   - port: 9292 # port - для доступа к сервису изнутри кластера
     protocol: TCP
-    targetPort: 9292
+    targetPort: 9292 # Порт POD-а
   selector:
     app: reddit
     component: ui
+
+# # Манифест для типа LoadBalancer
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: ui
+#   labels:
+#     app: reddit
+#     component: ui
+# spec:
+#   type: LoadBalancer
+#   ports:
+#   - port: 80 # Порт, который будет открыт на балансировщике
+#     nodePort: 32092
+#     protocol: TCP
+#     targetPort: 9292 # Порт POD-а
+#   selector:
+#     app: reddit
+#     component: ui
